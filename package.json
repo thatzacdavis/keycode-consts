@@ -1,18 +1,20 @@
 {
   "name": "keycode-consts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of key code constants and utility functions for JavaScript.",
   "main": "index.js",
   "author": "Zac Davis (@thatzacdavis)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thatzacdavis/keycode-consts"
+  },
   "files": [
     "pkg"
   ],
   "scripts": {
     "pika:build": "npx pika build",
     "publish:local": "cd pkg && yarn pack && copyfiles *.tgz .. && del-cli *.tgz",
-    "publish:pika": "npx pika publish",
-    "version": "npx @pika/pack",
     "test": "echo 'No tests are currently configured.'"
   },
   "devDependencies": {
