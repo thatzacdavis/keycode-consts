@@ -7,3 +7,7 @@ A collection of key code constants and utility functions for JavaScript.
 1. `yarn pika:pack`
 1. `yarn publish:local`
 1. Install package file into the repo you wish to test your changes in.
+
+### Does this work?
+
+I want a bug bounty!
