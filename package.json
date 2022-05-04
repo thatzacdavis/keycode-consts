@@ -1,6 +1,6 @@
 {
   "name": "keycode-consts",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A collection of key code constants and utility functions for JavaScript.",
   "main": "index.js",
   "author": "Zac Davis (@thatzacdavis)",
@@ -13,7 +13,7 @@
     "pkg"
   ],
   "scripts": {
-    "pika:build": "npx pika build",
+    "build": "npx @pika/pack",
     "publish:local": "cd pkg && yarn pack && copyfiles *.tgz .. && del-cli *.tgz",
     "test": "echo 'No tests are currently configured.'"
   },
