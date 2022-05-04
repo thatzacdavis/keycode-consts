@@ -2,6 +2,10 @@
 
 A collection of key code constants and utility functions for JavaScript.
 
+## Project Dependencies
+
+1. **@pika/pack** -- `npm install -g @pika/pack`
+
 ## How To Test Changes Locally
 
 1. `yarn pika:pack`
