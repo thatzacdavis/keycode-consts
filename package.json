@@ -1,6 +1,6 @@
 {
   "name": "keycode-consts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A collection of key code constants and utility functions for JavaScript.",
   "main": "index.js",
   "author": "Zac Davis (@thatzacdavis)",
