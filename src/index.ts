@@ -1,11 +1,17 @@
-import KeyCode from "./classes/keyCode";
+import KeyCode from './classes/keyCode.js';
 
 const keyCodes = {
     CANCEL: new KeyCode('0x03', 3, 'Cancel', 'The cancel key.', 'Cancel'),
     HELP: new KeyCode('0x06', 6, 'Help', 'The help key.', 'Help'),
     BACKSPACE: new KeyCode('0x08', 8, 'Backspace', 'The backspace key.', 'Backspace'),
     TAB: new KeyCode('0x09', 9, 'Tab', 'The tab key.', 'Tab'),
-    CLEAR: new KeyCode('0x12', 12, 'Clear', '"5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.', 'Clear'),
+    CLEAR: new KeyCode(
+        '0x12',
+        12,
+        'Clear',
+        '"5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.',
+        'Clear'
+    ),
     RETURN: new KeyCode('0x0D', 13, 'Enter', 'The enter or return key.', 'Enter'),
     ENTER: new KeyCode('0x0D', 13, 'Enter', 'The enter or return key.', 'Enter'),
     SHIFT: new KeyCode('0x10', 16, 'Shift', 'One of the shift keys.', 'Shift'),
@@ -13,19 +19,61 @@ const keyCodes = {
     ALT: new KeyCode('0x12', 18, 'Alt', 'The alt or option key.', 'Alt'),
     PAUSE: new KeyCode('0x13', 19, 'Pause', 'The pause key.', 'Pause'),
     CAPS_LOCK: new KeyCode('0x14', 20, 'Caps Lock', 'The caps lock key.', 'CapsLock'),
-    FUNCTION: new KeyCode('0x3F', -1, 'Function', "The Fn (Function modifier) key. Used to allow generating function key (F1–F15, for instance) characters on keyboards without a dedicated function key area. Often handled in hardware so that events aren't generated for this key.", 'Fn'),
+    FUNCTION: new KeyCode(
+        '0x3F',
+        -1,
+        'Function',
+        "The Fn (Function modifier) key. Used to allow generating function key (F1–F15, for instance) characters on keyboards without a dedicated function key area. Often handled in hardware so that events aren't generated for this key.",
+        'Fn'
+    ),
 
     KANA: new KeyCode('0x15', 21, 'Kana'),
-    HANGUL: new KeyCode('0x15', 21, 'Hangul', 'The Hangul (Korean character set) mode key, which toggles between Hangul and English entry modes.', 'HangulMode'),
-    EISU: new KeyCode('0x16', 22, 'Esiu'),
-    JUNJA: new KeyCode('0x17', 23, 'Junja', 'Selects the Junja mode, in which Korean is represented using single-byte Latin characters.', 'JunjaMode'),
-    FINAL: new KeyCode('0x18', 24, 'Final', 'The Final (Final Mode) key is used on some Asian keyboards to enter final mode when using IMEs.', 'FinalMode'),
-    HANJA: new KeyCode('0x19', 25, 'Hanja', 'Selects the Hanja mode, for converting Hangul characters to the more specific Hanja characters.', 'HanjaMode'),
+    HANGUL: new KeyCode(
+        '0x15',
+        21,
+        'Hangul',
+        'The Hangul (Korean character set) mode key, which toggles between Hangul and English entry modes.',
+        'HangulMode'
+    ),
+    EISU: new KeyCode('0x16', 22, 'Eisu'),
+    JUNJA: new KeyCode(
+        '0x17',
+        23,
+        'Junja',
+        'Selects the Junja mode, in which Korean is represented using single-byte Latin characters.',
+        'JunjaMode'
+    ),
+    FINAL: new KeyCode(
+        '0x18',
+        24,
+        'Final',
+        'The Final (Final Mode) key is used on some Asian keyboards to enter final mode when using IMEs.',
+        'FinalMode'
+    ),
+    HANJA: new KeyCode(
+        '0x19',
+        25,
+        'Hanja',
+        'Selects the Hanja mode, for converting Hangul characters to the more specific Hanja characters.',
+        'HanjaMode'
+    ),
     KANJI: new KeyCode('0x20', 26, 'Kanji'),
 
     ESCAPE: new KeyCode('0x1B', 27, 'Escape', 'The escape key.', 'Escape'),
-    CONVERT: new KeyCode('0x1C', 28, 'Convert', 'The Convert key, which instructs the IME to convert the current input method sequence into the resulting character.', 'Convert'),
-    NONCONVERT: new KeyCode('0x1D', 29, 'Nonconvert', "The NonConvert ('Don't convert') key. This accepts the current input method sequence without running conversion when using an IME.", 'NonConvert'),
+    CONVERT: new KeyCode(
+        '0x1C',
+        28,
+        'Convert',
+        'The Convert key, which instructs the IME to convert the current input method sequence into the resulting character.',
+        'Convert'
+    ),
+    NONCONVERT: new KeyCode(
+        '0x1D',
+        29,
+        'Nonconvert',
+        "The NonConvert ('Don't convert') key. This accepts the current input method sequence without running conversion when using an IME.",
+        'NonConvert'
+    ),
     ACCEPT: new KeyCode('0x1E', 30, 'Accept', 'Accept'),
     MODE_CHANGE: new KeyCode('0x1F', 31, 'Mode Change', 'The Mode Change key. Toggles or cycles among input modes of IMEs.', 'ModeChange'),
     SPACE: new KeyCode('0x20', 32, 'Space', 'The space bar.', ' '),
@@ -41,17 +89,23 @@ const keyCodes = {
     DOWN: new KeyCode('0x28', 40, 'Down', 'The down arrow.', 'ArrowDown'),
 
     SELECT: new KeyCode('0x29', 41, 'Select', 'The select key.', 'Select'),
-    PRINT: new KeyCode ('0x2A', 42, 'Print', 'Prints the current document or message.', 'Print'),
+    PRINT: new KeyCode('0x2A', 42, 'Print', 'Prints the current document or message.', 'Print'),
     EXECUTE: new KeyCode('0x2B', 43, 'Execute', 'The Execute key.', 'Execute'),
-    PRINT_SCREEN: new KeyCode('0x2C', 44, 'Print Screen', 'The PrintScreen or PrtScr key. Sometimes SnapShot. Captures the screen and prints it or saves it to disk.', 'PrintScreen'),
+    PRINT_SCREEN: new KeyCode(
+        '0x2C',
+        44,
+        'Print Screen',
+        'The PrintScreen or PrtScr key. Sometimes SnapShot. Captures the screen and prints it or saves it to disk.',
+        'PrintScreen'
+    ),
     INSERT: new KeyCode('0x2D', 45, 'Insert', 'The Ins(ert) key.', 'Insert'),
     DELETE: new KeyCode('0x2E', 46, 'Delete', 'The del(ete) key.', 'Delete'),
 
     // Standard Number Keys
-    0: new KeyCode('0x30', 48, '0', 'The 0 key in the "standard" location.' , '0'),
+    0: new KeyCode('0x30', 48, '0', 'The 0 key in the "standard" location.', '0'),
     1: new KeyCode('0x31', 49, '1', 'The 1 key in the "standard" location.', '1'),
     2: new KeyCode('0x32', 50, '2', 'The 2 key in the "standard" location.', '2'),
-    3: new KeyCode('0x33', 51, '3', 'The 3 key in the "standard" location.', '3'), 
+    3: new KeyCode('0x33', 51, '3', 'The 3 key in the "standard" location.', '3'),
     4: new KeyCode('0x34', 52, '4', 'The 4 key in the "standard" location.', '4'),
     5: new KeyCode('0x35', 53, '5', 'The 5 key in the "standard" location.', '5'),
     6: new KeyCode('0x36', 54, '6', 'The 6 key in the "standard" location.', '6'),
@@ -68,32 +122,32 @@ const keyCodes = {
     AT: new KeyCode('0x40', 64, 'Atmark', 'The atmark (@) key.', '@'),
 
     // Lowercase Letter Keys
-    A: new KeyCode('0x41', 65, 'a', 'The a key.', 'a'),
-    B: new KeyCode('0x42', 66, 'b', 'The b key.', 'b'),
-    C: new KeyCode('0x43', 67, 'c', 'The c key.', 'c'),
-    D: new KeyCode('0x44', 68, 'd', 'The d key.', 'd'),
-    E: new KeyCode('0x45', 69, 'e', 'The e key.', 'e'),
-    F: new KeyCode('0x46', 70, 'f', 'The f key.', 'f'),
-    G: new KeyCode('0x47', 71, 'g', 'The g key.', 'g'),
-    H: new KeyCode('0x48', 72, 'h', 'The h key.', 'h'),
-    I: new KeyCode('0x49', 73, 'i', 'The i key.', 'i'),
-    J: new KeyCode('0x4A', 74, 'j', 'The j key.', 'j'),
-    K: new KeyCode('0x4B', 75, 'k', 'The k key.', 'k'),
-    L: new KeyCode('0x4C', 76, 'l', 'The l key.', 'l'),
-    M: new KeyCode('0x4D', 77, 'm', 'The m key.', 'm'),
-    N: new KeyCode('0x4E', 78, 'n', 'The n key.', 'n'),
-    O: new KeyCode('0x4F', 79, 'o', 'The o key.', 'o'),
-    P: new KeyCode('0x50', 80, 'p', 'The p key.', 'p'),
-    Q: new KeyCode('0x51', 81, 'q', 'The q key.', 'q'),
-    R: new KeyCode('0x52', 82, 'r', 'The r key.', 'r'),
-    S: new KeyCode('0x53', 83, 's', 'The s key.', 's'),
-    T: new KeyCode('0x54', 84, 't', 'The t key.', 't'),
-    U: new KeyCode('0x55', 85, 'u', 'The u key.', 'u'),
-    V: new KeyCode('0x56', 86, 'v', 'The v key.', 'v'),
-    W: new KeyCode('0x57', 87, 'w', 'The w key.', 'w'),
-    X: new KeyCode('0x58', 88, 'x', 'The x key.', 'x'),
-    Y: new KeyCode('0x59', 89, 'y', 'The y key.', 'y'),
-    Z: new KeyCode('0x5A', 90, 'z', 'The z key.', 'z'),
+    a: new KeyCode('0x41', 65, 'a', 'The a key.', 'a'),
+    b: new KeyCode('0x42', 66, 'b', 'The b key.', 'b'),
+    c: new KeyCode('0x43', 67, 'c', 'The c key.', 'c'),
+    d: new KeyCode('0x44', 68, 'd', 'The d key.', 'd'),
+    e: new KeyCode('0x45', 69, 'e', 'The e key.', 'e'),
+    f: new KeyCode('0x46', 70, 'f', 'The f key.', 'f'),
+    g: new KeyCode('0x47', 71, 'g', 'The g key.', 'g'),
+    h: new KeyCode('0x48', 72, 'h', 'The h key.', 'h'),
+    i: new KeyCode('0x49', 73, 'i', 'The i key.', 'i'),
+    j: new KeyCode('0x4A', 74, 'j', 'The j key.', 'j'),
+    k: new KeyCode('0x4B', 75, 'k', 'The k key.', 'k'),
+    l: new KeyCode('0x4C', 76, 'l', 'The l key.', 'l'),
+    m: new KeyCode('0x4D', 77, 'm', 'The m key.', 'm'),
+    n: new KeyCode('0x4E', 78, 'n', 'The n key.', 'n'),
+    o: new KeyCode('0x4F', 79, 'o', 'The o key.', 'o'),
+    p: new KeyCode('0x50', 80, 'p', 'The p key.', 'p'),
+    q: new KeyCode('0x51', 81, 'q', 'The q key.', 'q'),
+    r: new KeyCode('0x52', 82, 'r', 'The r key.', 'r'),
+    s: new KeyCode('0x53', 83, 's', 'The s key.', 's'),
+    t: new KeyCode('0x54', 84, 't', 'The t key.', 't'),
+    u: new KeyCode('0x55', 85, 'u', 'The u key.', 'u'),
+    v: new KeyCode('0x56', 86, 'v', 'The v key.', 'v'),
+    w: new KeyCode('0x57', 87, 'w', 'The w key.', 'w'),
+    x: new KeyCode('0x58', 88, 'x', 'The x key.', 'x'),
+    y: new KeyCode('0x59', 89, 'y', 'The y key.', 'y'),
+    z: new KeyCode('0x5A', 90, 'z', 'The z key.', 'z'),
 
     // Uppercase Letter Keys
     A: new KeyCode('0x41', 65, 'A', 'The A key.', 'A'),
@@ -134,19 +188,25 @@ const keyCodes = {
     NUMPAD3: new KeyCode('0x63', 99, '3', '"3" on the numeric keypad.', '3'),
     NUMPAD4: new KeyCode('0x64', 100, '4', '"4" on the numeric keypad.', '4'),
     NUMPAD5: new KeyCode('0x65', 101, '5', '"5" on the numeric keypad.', '5'),
-    NUMPAD6: new KeyCode('0x66', 102, '6 ', '"6" on the numeric keypad.', '6'),
+    NUMPAD6: new KeyCode('0x66', 102, '6', '"6" on the numeric keypad.', '6'),
     NUMPAD7: new KeyCode('0x67', 103, '7', '"7" on the numeric keypad.', '7'),
     NUMPAD8: new KeyCode('0x68', 104, '8', '"8" on the numeric keypad.', '8'),
-    NUMPAD9: new KeyCode('0x69', 105, '9', '"8" on the numeric keypad.', '9'),
+    NUMPAD9: new KeyCode('0x69', 105, '9', '"9" on the numeric keypad.', '9'),
     MULTIPLY: new KeyCode('0x6A', 106, '*', 'The "*" key on the numeric keypad.', 'Multiply'),
     ADD: new KeyCode('0x6B', 107, '+', 'The "+" key on the numeric keypad.', 'Add'),
-    SEPARATOR: new KeyCode('0x6C', 108, 'Separator', "The numeric keypad's places separator character. (In the United States this is a comma, but elsewhere it is frequently a period.)", 'Separator'),
+    SEPARATOR: new KeyCode(
+        '0x6C',
+        108,
+        'Separator',
+        "The numeric keypad's places separator character. (In the United States this is a comma, but elsewhere it is frequently a period.)",
+        'Separator'
+    ),
     SUBTRACT: new KeyCode('0x6D', 109, '-', 'The "-" key on the numeric keypad.', 'Subtract'),
     DECIMAL: new KeyCode('0x6E', 110, '.', 'The decimal point on the numeric keypad.', 'Decimal'),
     DIVIDE: new KeyCode('0x6F', 111, '/', 'The division key on the numeric keypad.', 'Divide'),
 
     // Function Keys
-    F1: new KeyCode('0x70', 112, 'F1', 'The F1 key.' , 'F1'),
+    F1: new KeyCode('0x70', 112, 'F1', 'The F1 key.', 'F1'),
     F2: new KeyCode('0x71', 113, 'F2', 'The F2 key.', 'F2'),
     F3: new KeyCode('0x72', 114, 'F3', 'The F3 key.', 'F3'),
     F4: new KeyCode('0x73', 115, 'F4', 'The F4 key.', 'F4'),
@@ -176,8 +236,18 @@ const keyCodes = {
 
     // Fujitsu OASYS Specific Keys
     WIN_OEM_FJ_JISHO: new KeyCode('0x92', 146, 'Jisho', 'An OEM specific key on Windows. This was used for "Dictionary" key on Fujitsu OASYS.'),
-    WIN_OEM_FJ_MASSHOU: new KeyCode('0x93', 147, 'Masshou', 'An OEM specific key on Windows. This was used for "Unregister word" key on Fujitsu OASYS.'),
-    WIN_OEM_FJ_TOUROKU: new KeyCode('0x94', 148, 'Touroku', 'An OEM specific key on Windows. This was used for "Register word" key on Fujitsu OASYS.'),
+    WIN_OEM_FJ_MASSHOU: new KeyCode(
+        '0x93',
+        147,
+        'Masshou',
+        'An OEM specific key on Windows. This was used for "Unregister word" key on Fujitsu OASYS.'
+    ),
+    WIN_OEM_FJ_TOUROKU: new KeyCode(
+        '0x94',
+        148,
+        'Touroku',
+        'An OEM specific key on Windows. This was used for "Register word" key on Fujitsu OASYS.'
+    ),
     WIN_OEM_FJ_LOYA: new KeyCode('0x95', 149, 'Loya', 'An OEM specific key on Windows. This was used for "Left OYAYUBI" key on Fujitsu OASYS.'),
     WIN_OEM_FJ_ROYA: new KeyCode('0x96', 150, 'Roya', 'An OEM specific key on Windows. This was used for "Right OYAYUBI" key on Fujitsu OASYS.'),
 
@@ -193,7 +263,7 @@ const keyCodes = {
     CLOSE_PAREN: new KeyCode('0xA9', 169, 'Close Paren', 'The close paren ()) key.'),
     ASTERISK: new KeyCode('0xAA', 170, 'Asterisk', 'The asterisk (*) key.'),
     PLUS: new KeyCode('0xAB', 171, 'Plus', 'The plus (+) key.'),
-    PIPE: new KeyCode('0xAC', 172, 'Asterisk', 'The asterisk (*) key.'),
+    PIPE: new KeyCode('0xAC', 172, 'Pipe', 'The pipe (|) key.'),
     HYPHEN_MINUS: new KeyCode('0xAD', 173, 'Hyphen/Minus', 'The hyphen or minus (-) key.'),
     OPEN_CURLY_BRACKET: new KeyCode('0xAE', 174, 'Open Bracket', 'The open bracket ({) key.'),
     CLOSE_CURLY_BRACKET: new KeyCode('0xAF', 175, 'Close Bracket', 'The close bracket (}) key.'),
@@ -210,7 +280,7 @@ const keyCodes = {
     OPEN_BRACKET: new KeyCode('0xDB', 219, '[', 'The open bracket ([) key.'),
     BACK_SLASH: new KeyCode('0xDC', 220, '\\', 'The backslash (\\) key.'),
     CLOSE_BRACKET: new KeyCode('0xDD', 221, ']', 'The close bracket (]) key.'),
-    QUOTE: new KeyCode('0xDE', 222, '\'', 'The quote (\') key.'),
+    QUOTE: new KeyCode('0xDE', 222, "'", "The quote (') key."),
 
     META: new KeyCode('0xE0', 224, 'Meta', 'The meta key on Linux, or Command on Mac.', 'Meta'),
     COMMAND: new KeyCode('0xE0', 224, 'Command', 'The meta key on Linux, or Command on Mac.', 'Meta'),
@@ -229,7 +299,7 @@ const keyCodes = {
     WIN_OEM_PA3: new KeyCode('0xED', 237, 'OEM PA3'),
     WIN_OEM_WSCTRL: new KeyCode('0xEE', 238, 'OEM WSCTRL'),
     WIN_OEM_CUSEL: new KeyCode('0xEF', 239, 'OEM CUSEL'),
-    WIN_OEM_ATTN: new KeyCode('0xF0', 240, 'OEM ATTN' ,'Attn'),
+    WIN_OEM_ATTN: new KeyCode('0xF0', 240, 'OEM ATTN', 'Attn'),
     WIN_OEM_FINISH: new KeyCode('0xF1', 241, 'OEM FINISH', 'The Finish key.', 'Finish'),
     WIN_OEM_COPY: new KeyCode('0xF2', 242, 'OEM COPY', 'Hiragana'),
     WIN_OEM_AUTO: new KeyCode('0xF3', 243, 'OEM AUTO', 'Hankaku'),
@@ -245,7 +315,11 @@ const keyCodes = {
     PA1: new KeyCode('0xFD', 253, 'PA1', 'The PA1 key of IBM 3270 keyboard layout.'),
     WIN_OEM_CLEAR: new KeyCode('0xFE', 254, 'Clear', 'The Clear key on Windows.', 'Clear'),
 
-    UNIDENTIFIED: new KeyCode('', '', '', '', 'Unidentified'),
-}
+    UNIDENTIFIED: new KeyCode('', -1, 'Unidentified', '', 'Unidentified'),
+};
+
+export type KeyCodes = typeof keyCodes;
+
+export { default as KeyCode } from './classes/keyCode.js';
 
 export default keyCodes;
