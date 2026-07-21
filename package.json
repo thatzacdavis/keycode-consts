@@ -1,6 +1,6 @@
 {
     "name": "keycode-consts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A collection of key code constants and utility functions for JavaScript.",
     "type": "module",
     "sideEffects": false,
